@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:background="@drawable/night_out"
+    android:alpha="0.3">
+</shape>

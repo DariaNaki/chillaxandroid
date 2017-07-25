@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/message"
+        android:background="@drawable/elliptical_button_signin"
+        android:layout_gravity="right"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:gravity="right|center_vertical"
+        android:layout_alignParentRight="true"
+        android:textAlignment="gravity"/>
+
+

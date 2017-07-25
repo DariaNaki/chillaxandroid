@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chat_room"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="exampfi.daria.chillaxlinuxtryandroid.Views.ChatRoomActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/back_il"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:background="#22FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/old"
+                android:background="@drawable/elliptical_button"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:id="@+id/present_chat"
+                android:layout_gravity="right"
+                android:gravity="right"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/manageable"
+            android:layout_weight="0.9"
+            android:orientation="horizontal"
+            >
+
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:text="@string/new_char_room_name"
+                android:ems="10"
+                android:id="@+id/toBeSent"
+                android:background="@drawable/elliptical_button"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"/>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/send_message"
+                    android:background="@drawable/elliptical_button_signin"
+                    android:text="@string/new_chat"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:clickable="true"
+
+                    />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </RelativeLayout>
+
+
+

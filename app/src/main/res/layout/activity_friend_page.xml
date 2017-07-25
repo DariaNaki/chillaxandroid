@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.65"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/winehouse"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:alpha="0.8"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_login"
+                android:fontFamily="serif"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="135dp"
+                android:textStyle="bold"
+                android:text="@string/user_name"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_status"
+                android:fontFamily="serif"
+                android:textColor="#000"
+                android:layout_marginTop="165dp"
+                android:textSize="16dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="bottom"
+                android:textStyle="bold"
+                android:text="@string/your_status"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:layout_marginBottom="15dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.9"
+            android:scaleType="fitXY"
+            android:background="#E6BE8A">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_add_friend"
+                android:src="@drawable/add_friend"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickAddFriend"
+                />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_home_page"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickDeleteUser"
+                android:src="@drawable/delete_user"
+               />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_friends"
+                android:src="@drawable/rsz_friends"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickFriends"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_messages"
+                android:src="@drawable/rsz_chat"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickChat"
+                />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_map"
+                android:src="@drawable/rsz_map"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickMap"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_appointment"
+                android:src="@drawable/rsz_createappointment"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickAppointments"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.35"
+        android:orientation="vertical">
+
+
+        <ListView
+            android:id="@+id/wall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:longClickable="false"
+            >
+
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

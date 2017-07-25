@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#FFD300</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="text_color_hint">#000</color>
+    <color name="text_color_hint_old">#000</color>
+    <color name="text_shadow">#000</color>
+    <color name="lightYellow">#E6BE8A</color>
+    <color name="strongYellow">#E6BE8A</color>
+</resources>

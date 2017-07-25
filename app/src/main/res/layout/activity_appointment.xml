@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_appointment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="exampfi.daria.chillaxlinuxtryandroid.Views.Appointment"
+    android:orientation="vertical"
+    android:background="@drawable/back_il"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       android:background="#80FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center_horizontal|center_vertical">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="50dp"
+                    android:id="@+id/create_appointment"
+                    android:background="@drawable/save_app"
+                    android:clickable="true"
+                    android:layout_marginBottom="4dp"
+                   />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center_horizontal|center_vertical">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="50dp"
+                    android:id="@+id/history_of_appointments"
+                    android:background="@drawable/history"
+                    android:clickable="true"
+                    android:layout_marginBottom="4dp"
+                   />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:gravity="center_horizontal|center_vertical">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="50dp"
+                    android:id="@+id/clear_db"
+                    android:background="@drawable/bin"
+                    android:clickable="true"
+                    android:layout_marginBottom="4dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+           android:gravity="center_horizontal|center_vertical"
+            android:id="@+id/general"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal|center_vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                   android:layout_marginRight="45dp"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="@null"
+                            android:id="@+id/invite_friends"
+                            android:src="@drawable/appointment"
+                            android:layout_gravity="left"
+                            android:onClick="onClickFindFriends"
+                            android:clickable="true"
+                            />
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:id="@+id/choose_another_place"
+                            android:src="@drawable/map"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:clickable="true"
+                            android:onClick="onClickChangeLocation"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="@string/appointment_name"
+                        android:ems="10"
+                        android:id="@+id/appointment_name"
+                        android:layout_weight="1"
+                        android:background="@drawable/elliptical_button_small"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal|center_vertical"/>
+
+                    <AutoCompleteTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/sober_mail"
+                        android:ems="10"
+                        android:id="@+id/appointment_mail"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/elliptical_button_small"/>
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:id="@+id/rating_drunk"
+                        android:layout_weight="1"
+                        android:numStars="4"
+                        android:stepSize="1.0"
+                        android:theme="@style/RatingBar"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="Enter the force of fun"
+                        android:id="@+id/force_of_fun"
+                        android:fontFamily="serif"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textColor="#000"
+                        android:visibility="visible"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:hint="@string/appointment_date"
+                        android:ems="10"
+                        android:id="@+id/appointment_date"
+                        android:inputType="date"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/elliptical_button_small"
+                        android:layout_marginBottom="5dp"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:hint="@string/appointment_time"
+                        android:ems="10"
+                        android:inputType="time"
+                        android:id="@+id/appointment_time"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:onClick="onClick"
+                        android:background="@drawable/elliptical_button_small"
+                        android:layout_marginBottom="5dp"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:id="@+id/specific"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp">
+
+
+                <LinearLayout
+                    android:layout_width="322dp"
+                    android:layout_height="102dp"
+                    android:background="@color/colorAccent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="1dp"
+                    android:layout_width="320dp"
+                    android:layout_height="100dp"
+                    android:background="#fff"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:id="@+id/place_for_appointment"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:fontFamily="serif"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="10dp"
+                        android:text=""
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/adress_for_appointment"
+                        android:text=""
+                        android:gravity="center"
+                        android:fontFamily="serif"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        />
+                </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:id="@+id/place_chosen"
+                    android:text="@string/chosen_place"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#000"
+                    android:textSize="10dp"
+
+
+                    android:layout_weight="0.5" />
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:id="@+id/invited_friends"/>
+            </LinearLayout>
+
+
+</LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

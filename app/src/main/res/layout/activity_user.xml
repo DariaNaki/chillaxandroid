@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.65"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:layout_weight="0.2">
+
+         <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:src="@drawable/back_il"
+             android:adjustViewBounds="true"
+             android:scaleType="centerCrop"
+             android:alpha="0.8"
+             android:clickable="true"
+             android:onClick="onClickUploadAvatar"
+             android:id="@+id/user_av"
+             />
+
+
+     </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.8"
+            android:scaleType="fitXY"
+            android:background="#E6BE8A"
+            android:id="@+id/all_buttons">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_add_friend"
+                android:src="@drawable/add_friend"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickAddFriend"
+                />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_home_page"
+                android:src="@drawable/rsz_home"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickHome"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_friends"
+                android:src="@drawable/rsz_friends"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickFriends"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_messages"
+                android:src="@drawable/rsz_chat"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickChat"
+                />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_map"
+                android:src="@drawable/rsz_map"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickMap"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_appointment"
+                android:src="@drawable/rsz_createappointment"
+                android:background="@null"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:onClick="onClickAppointments"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:id="@+id/user_login"
+            android:fontFamily="serif"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:textStyle="bold"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="@string/def_name"/>
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:id="@+id/status_spinner"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp"
+            android:textColor = "#000"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6BE8A">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@null"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:id="@+id/whats_on_my_mind"
+                    android:hint="@string/new_post"
+                    />
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/post_button"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:onClick="onClickSendPost"
+                android:src="@drawable/send_post"
+                />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/wall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:longClickable="false"
+            >
+
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

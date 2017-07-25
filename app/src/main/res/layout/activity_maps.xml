@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        style="@style/BackGroundImageViewMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+
+                >
+                <Button
+
+                    android:layout_width="180dp"
+
+                    android:layout_height="18pt"
+                    android:text="@string/show_route"
+                    android:id="@+id/button_route"
+                    android:onClick="showRoute"
+                    android:layout_gravity="start"
+                    android:fontFamily="serif"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:background="#FFCC33"
+                    style="@drawable/elliptical_button"
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="2dp"/>
+
+                <Button
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="180dp"
+                    android:layout_height="18pt"
+                    android:text="@string/places_to_go"
+                    android:id="@+id/button_places"
+                    android:layout_gravity="end"
+
+                    android:clickable="true"
+                    android:onClick="onCLickPlacePicker"
+                    android:fontFamily="serif"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:background="#FFCC33"
+                    style="@drawable/elliptical_button"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <Button
+
+                    android:layout_width="180dp"
+                    android:layout_height="18pt"
+                    android:text="@string/find_friends"
+                    android:id="@+id/button_friends"
+                    android:fontFamily="serif"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:background="#FFCC33"
+                    style="@drawable/elliptical_button"
+                    android:layout_marginLeft="2dp"
+                    android:onClick="onClickGoBack"
+                    android:clickable="true"/>
+
+                <Button
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="180dp"
+                    android:layout_height="18pt"
+                    android:text="@string/meet_up"
+                    android:id="@+id/button_create_app"
+
+                    android:fontFamily="serif"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:background="#FFCC33"
+                    style="@drawable/elliptical_button"
+                    android:onClick="onClickAppointment"
+                    android:clickable="true" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+
+            >
+            <fragment
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="372dp"
+                android:layout_height="match_parent"
+                tools:context="exampfi.daria.chillaxlinuxtryandroid" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

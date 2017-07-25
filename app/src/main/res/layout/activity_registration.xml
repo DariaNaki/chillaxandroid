@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+
+    android:layout_gravity="center"
+    android:background="#000"
+    >
+
+    <ImageView
+        style="@style/BackGroundImageViewRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7">
+            <TextView
+                android:text="@string/welcome_to_the_party"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/welcome_to_chillax"
+                android:fontFamily="serif"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#89CFF0"
+                android:layout_marginTop="44dp"
+                android:gravity="center_horizontal"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="4"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="0.3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <AutoCompleteTextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:hint="@string/first_name"
+                android:id="@+id/viewFirstName"
+                android:fontFamily="serif"
+                android:textColor="#B0E0E6"
+                android:textStyle="bold"/>
+
+            <AutoCompleteTextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/last_name"
+                android:ems="10"
+                android:id="@+id/viewLastName"
+                android:fontFamily="serif"
+                android:textColor="#B0E0E6"
+                android:textStyle="bold"/>
+
+            <AutoCompleteTextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email"
+                android:ems="10"
+                android:id="@+id/viewEmail"
+                android:fontFamily="serif"
+                android:textColor="#B0E0E6"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:ems="10"
+                android:id="@+id/viewPassword"
+                android:fontFamily="serif"
+                android:textColor="#B0E0E6"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:hint="@string/birthday"
+                android:ems="10"
+                android:id="@+id/viewBirthday"
+                android:fontFamily="serif"
+                android:textColor="#B0E0E6"
+                android:textStyle="bold"/>
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:text="@string/register"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonOK"
+                android:onClick="onRegisterClick"
+                android:fontFamily="serif"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:background="#B0E0E6"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

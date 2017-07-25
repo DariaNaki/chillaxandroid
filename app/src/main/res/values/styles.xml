@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/text_color_hint</item>
+
+    </style>
+
+    <style name="AppThemeWithoutLightHint" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/text_color_hint_old</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="BackGroundImageViewRegistration">
+        <item name="android:alpha">0.8</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/winehouse</item>
+    </style>
+
+    <style name="BackGroundImageViewLoginWeb">
+        <item name="android:alpha">1.0</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/back_il</item>
+    </style>
+
+    <style name="BackGroundImageViewLogin">
+        <item name="android:alpha">0.8</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/stairs</item>
+    </style>
+
+    же
+
+    <style name="BackGroundImageViewMap">
+        <item name="android:alpha">0.7</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/naples</item>
+    </style>
+
+    <style name="BackGroundImageViewAppointment">
+        <item name="android:alpha">1.0</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/naples</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+</resources>

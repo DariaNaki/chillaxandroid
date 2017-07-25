@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_history_of_appointments"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_il"
+    tools:context="exampfi.daria.chillaxlinuxtryandroid.Views.HistoryOfAppointmentsActivity"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80FFFFFF"
+        android:orientation="vertical"
+        android:layout_weight="0.2"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:id="@+id/result_db"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center_horizontal|center_vertical">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/elliptical_button"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/id_db_to_be_deleted"
+                android:background="@drawable/elliptical_button_small"
+                android:layout_weight="0.4"
+                android:text="@string/hist_app"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+               />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/createappointment"
+                android:background="@null"
+                android:layout_weight="0.6"
+                android:id="@+id/add_to_db"
+                android:clickable="true"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
